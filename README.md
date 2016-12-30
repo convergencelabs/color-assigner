@@ -42,7 +42,7 @@ var color2 = ca.getColorAsRgba("id2");
 ## Advanged Usage
 
 ```javascript
-// Create a new ColorAssigner using one of the build in palettes.
+// Create a new ColorAssigner using one of the built in palettes.
 var ColorAssigner = require("@convergence/color-assigner");
 
 var ca1 = new ColorAssigner(ColorAssigner.Palettes.DEFAULT);
