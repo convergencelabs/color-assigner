@@ -9,13 +9,15 @@
   "version": "0.1.0",
   "homepage": "http://convergencelabs.com",
   "author": {
-    "name": "Convergence Labs",
-    "url": "http://convergencelabs.com"
+    "name": "Convergence Labs, Inc.",
+    "url": "http://convergencelabs.com",
+    "email": "info@convergencelabs.com"
   },
   "repository": {
     "type": "git",
     "url": "https://gitlab.convergencelabs.tech/js-examples/color-assigner.git"
   },
+  "contributors": [],
   "bugs": {
     "url": "https://gitlab.convergencelabs.tech/js-examples/color-assigner/issues"
   },
