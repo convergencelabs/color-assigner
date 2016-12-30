@@ -1,4 +1,6 @@
 # Color Assigner
+[![Build Status](https://travis-ci.org/convergencelabs/color-assigner.svg?branch=master)](https://travis-ci.org/convergencelabs/color-assigner)
+
 The color assigner will manage assigning consistent colors to unique resources
 in your application.  This could be users, labels, etc.  You may define a 
 palette or preferred colors to use.  The colors from the palette will be used
