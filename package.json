@@ -6,7 +6,7 @@
     "color",
     "assigner"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://convergencelabs.com",
   "author": {
     "name": "Convergence Labs, Inc.",
@@ -15,11 +15,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://gitlab.convergencelabs.tech/js-examples/color-assigner.git"
+    "url": "https://github.com/convergencelabs/color-assigner.git"
   },
   "contributors": [],
   "bugs": {
-    "url": "https://gitlab.convergencelabs.tech/js-examples/color-assigner/issues"
+    "url": "https://github.com/convergencelabs/color-assigner/issues"
   },
   "license": "MIT",
   "scripts": {
