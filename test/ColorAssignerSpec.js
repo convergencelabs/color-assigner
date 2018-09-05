@@ -1,3 +1,4 @@
+require('should');
 const ColorAssigner = require('../build/lib/ColorAssigner');
 
 describe('ColorAssigner', function () {
@@ -57,6 +58,37 @@ describe('ColorAssigner', function () {
       color2.should.equal('#0000ff');
       color3.should.not.equal('#ff0000');
       color3.should.not.equal('#0000ff');
+    });
+  });
+
+  describe('claimColor(id, string)', function () {
+    it('should not blow up', function () {
+      const ca = new ColorAssigner(['#ff0000', '#0000ff']);
+      ca.claimColor('1', '#ff0000');
+    });
+
+    it('should not assign claimed colors', function () {
+      const ca = new ColorAssigner(['#ff0000', '#0000ff']);
+      ca.claimColor('1', '#ff0000');
+
+      const color1 = ca.getColorAsHex('2');
+      color1.should.equal('#0000ff');
+
+      const color2 = ca.getColorAsHex('3');
+      color2.should.not.equal('#0000ff');
+      color2.should.not.equal('#ff0000');
+    });
+
+    it('should release claimed colors', function () {
+      const ca = new ColorAssigner(['#ff0000', '#0000ff']);
+      ca.claimColor('1', '#ff0000');
+      ca.releaseColor('1');
+
+      const color1 = ca.getColorAsHex('2');
+      color1.should.equal('#0000ff');
+
+      const color2 = ca.getColorAsHex('3');
+      color2.should.equal('#ff0000');
     });
   });
 });

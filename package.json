@@ -25,6 +25,7 @@
   "scripts": {
     "build": "gulp build",
     "dist": "gulp dist",
+    "test": "gulp test",
     "clean": "gulp clean"
   },
   "publishConfig": {
@@ -53,15 +54,15 @@
     "gulp-clean-css": "2.0.12",
     "gulp-concat": "^2.6.1",
     "gulp-header": "1.8.8",
-    "gulp-mocha": "3.0.1",
+    "gulp-mocha": "^6.0.0",
     "gulp-rename": "1.2.2",
     "gulp-sourcemaps": "1.6.0",
     "gulp-uglify": "2.0.0",
     "gulp-webpack": "1.5.0",
     "husl": "6.0.1",
     "merge2": "1.0.2",
-    "mocha": "3.0.2",
-    "should": "11.1.0",
+    "mocha": "^5.2.0",
+    "should": "^11.1.0",
     "webpack": "1.14.0"
   }
 }

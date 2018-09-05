@@ -151,6 +151,23 @@ export default class ColorAssigner {
     }
   }
 
+  claimColor(id, colorStr) {
+    let color = parser.parseCSSColor(colorStr);
+    if (color == null) {
+      throw new Error(`invalid color: ${colorStr}`);
+    }
+
+    const foundIndex = this._availableColors.findIndex(c => {
+      return c.every((colorPart, i) => color[i] === colorPart);
+    });
+    if (foundIndex >= 0) {
+      color = this._availableColors[foundIndex];
+      this._availableColors.splice(foundIndex, 1);
+    }
+    this._assignedColorsById[id] = color;
+    this._assignedColors.push(color);
+  }
+
   /**
    * Acquires an unused color. This method will attempt to return a preferred
    * color first, and then generate a random color if a preferred color is not
