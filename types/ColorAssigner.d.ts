@@ -12,6 +12,8 @@ declare class ColorAssigner {
   getColorAsRgba(id: string): string;
   getColorAsHex(id: string): string;
 
+  claimColor(id: string, colorStr: string): void;
+
   releaseColor(id: string): void;
 }
 
