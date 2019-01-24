@@ -1,21 +1,21 @@
-var ca = new ColorAssigner();
+const ca = new ConvergenceColorAssigner.ColorAssigner();
 
-var colorList = document.getElementById('colors');
-var nextId = 0;
+const colorList = document.getElementById('colors');
+let nextId = 0;
 
 function addColor() {
-  var id = nextId++;
-  var color = ca.getColorAsHex(id);
+  const id = nextId++;
+  const color = ca.getColorAsHex(id);
 
-  var li = document.createElement('li');
+  const li = document.createElement('li');
   li.className = 'color-item';
   li.style.background = color;
 
-  var span = document.createElement('span');
+  const span = document.createElement('span');
   span.innerHTML = color;
   li.appendChild(span);
 
-  var removeButton = document.createElement('button');
+  const removeButton = document.createElement('button');
   removeButton.innerHTML = "Remove Color";
   removeButton.className = "remove-button";
 
@@ -28,7 +28,7 @@ function addColor() {
   colorList.appendChild(li);
 }
 
-for (var i = 0; i < ca.palette().length; i++) {
+for (let i = 0; i < ca.palette().length; i++) {
   addColor();
 }
 

@@ -1,5 +1,6 @@
-require('should');
-const ColorAssigner = require('../build/lib/ColorAssigner');
+import 'mocha';
+import 'should';
+import {ColorAssigner} from "../src/ColorAssigner";
 
 describe('ColorAssigner', function () {
   describe('constructor', function () {

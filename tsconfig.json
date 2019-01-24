@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "stripInternal": true,
+    "declaration": false,
+    "lib": ["dom", "es6", "es7"]
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "build",
+    "dist",
+    "example"
+  ]
+}

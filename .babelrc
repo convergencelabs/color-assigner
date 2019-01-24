@@ -1,4 +1,16 @@
 {
-  "presets": ["es2015"],
-  "plugins": ["babel-plugin-add-module-exports"]
+  "presets": [
+    ["@babel/env", {
+      "targets": {
+        "browsers": ["last 2 versions"]
+      }
+    }],
+    "@babel/typescript"
+  ],
+  "plugins": [
+    ["module-resolver", {
+      "extensions": [".js", ".ts"],
+      "root": ["./src/js"]
+    }]
+  ]
 }

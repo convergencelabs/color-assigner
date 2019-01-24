@@ -1,4 +1,6 @@
-const ColorGenerator = require('../build/lib/ColorGenerator');
+import 'mocha';
+import {ColorGenerator} from "../src/ColorGenerator";
+import 'should';
 
 describe('ColorGenerator', function() {
   describe('generateRandomColor(array)', function() {
@@ -9,11 +11,10 @@ describe('ColorGenerator', function() {
 
     it('Should generate valid color', function () {
       const color = ColorGenerator.generateRandomColor([]);
-      color.length.should.equal(4);
-      color[0].should.be.within(0, 255);
-      color[1].should.be.within(0, 255);
-      color[2].should.be.within(0, 255);
-      color[3].should.be.within(0, 255);
+      color.r.should.be.within(0, 255);
+      color.g.should.be.within(0, 255);
+      color.b.should.be.within(0, 255);
+      color.a.should.be.within(0, 255);
     });
   });
 });
